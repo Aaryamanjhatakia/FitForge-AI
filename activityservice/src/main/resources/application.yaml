@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: activity-service
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/FitForge_activity_db
+
+server:
+  port: 8082
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
