@@ -4,6 +4,11 @@ spring:
   data:
     mongodb:
       uri: mongodb://localhost:27017/FitForge_activity_db
+  rabbitmq:
+    host: localhost
+    port: 5672
+    username: guest
+    password: guest
 
 server:
   port: 8082
@@ -17,6 +22,6 @@ rabbitmq:
   exchange:
     name: fitness.exchange
   queue:
-    activity.queue
+    name: activity.queue
   routing:
-    activity.tracking
+    key: activity.tracking
